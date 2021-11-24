@@ -4,8 +4,9 @@ import "./index.css";
 
 const Card = (props) => {
   const task = props.data;
-  const prazo = task.prazo.slice(0, 10);
-
+  if (task.prazo !== undefined || task.prazo !== null) { 
+    var prazo = task.prazo.slice(0, 10);
+  }
   return (
     <Link to={`/view/${task._id}`} className="col" id="cards">
       <div className="card border-info mb-3">
