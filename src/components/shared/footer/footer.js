@@ -3,7 +3,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="fixed-bottom">
       <div>
         <a href="https://github.com/Leonardo-KF" target="_blank">
           Desenvolvido por Leonardo

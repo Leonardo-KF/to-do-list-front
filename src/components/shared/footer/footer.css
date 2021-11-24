@@ -1,6 +1,7 @@
 footer {
   display: flex;
   max-height: 250px;
+  position: relative;
   width: 100%;
   background-color: aqua;
   align-items: center;
