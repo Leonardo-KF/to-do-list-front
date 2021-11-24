@@ -67,6 +67,7 @@ const Edit = () => {
                 <div className="form-group">
                   <label htmlFor="title">Title:</label>
                   <input
+                    required
                     id="titulo"
                     className="form-control"
                     type="text"
@@ -81,6 +82,7 @@ const Edit = () => {
                 <div className="form-group">
                   <label htmlFor="descricao">Description:</label>
                   <input
+                    required
                     id="descricao"
                     type="text"
                     className="form-control"
@@ -133,6 +135,7 @@ const Edit = () => {
                     Deadline
                   </label>
                   <input
+                    required
                     type="date"
                     className="form-control"
                     name="prazo"

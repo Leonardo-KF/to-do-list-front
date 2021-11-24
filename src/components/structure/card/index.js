@@ -4,7 +4,7 @@ import "./index.css";
 
 const Card = (props) => {
   const task = props.data;
-  if (task.prazo !== undefined || task.prazo !== null) { 
+  if (task.prazo !== undefined && task.prazo !== null) { 
     var prazo = task.prazo.slice(0, 10);
   }
   return (

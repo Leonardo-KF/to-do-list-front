@@ -52,6 +52,7 @@ const Add = () => {
             Title:
           </label>
           <input
+            required
             type="text"
             className="form-control"
             id="title"
@@ -63,6 +64,7 @@ const Add = () => {
             Description:
           </label>
           <input
+            required
             type="text"
             className="form-control"
             id="description"
@@ -103,7 +105,7 @@ const Add = () => {
           <label htmlFor="Deadline" className="form-label">
             Deadline
           </label>
-          <input type="date" className="form-control" name="prazo" />
+          <input type="date" className="form-control" name="prazo" required/>
         </div>
         <button type="submit" className="btn btn-success">
           Create

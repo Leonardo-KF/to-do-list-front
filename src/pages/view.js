@@ -40,7 +40,7 @@ const View = () => {
     getTaskById();
   }, []);
 
-  if (task.prazo !== undefined || task.prazo !== null) {
+  if (task.prazo !== undefined && task.prazo !== null) {
     var deadline = task.prazo.slice(0, 10);
     var creation = task.datac.slice(0, 10);
   }
