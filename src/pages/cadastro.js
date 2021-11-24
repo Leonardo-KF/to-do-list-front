@@ -17,29 +17,37 @@ const Add = () => {
     const prioridade = event.target.prioridade.value;
     const status = event.target.status.value;
     const prazo = event.target.prazo.value;
-    console.log(prazo);
+    
+    if (titulo === undefined || titulo === "" ) {
+      alert("Por favor preencha o titulo");
+    } else if (descricao === undefined || descricao === "" ) {
+      alert("Por favor preencha a descricao");
+    } else if (prazo === undefined || prazo === "" || prazo === null) {
+      alert("Por favor preencha o prazo")
+    } else { 
 
-    const task = {
-      titulo,
-      descricao,
-      prioridade,
-      status,
-      prazo,
-    };
+      const task = {
+        titulo,
+        descricao,
+        prioridade,
+        status,
+        prazo,
+      };
 
-    const req = await Api.fetchPost(task);
+      const req = await Api.fetchPost(task);
 
-    if (req.status === 500) {
-      alert("Erro no servidor");
-    }
+      if (req.status === 500) {
+        alert("Erro no servidor");
+      }
+    
+      const result = await req.json();
 
-    const result = await req.json();
-
-    if (result.error) {
-      alert("ERRO 404, tente novamente mais tarde");
-    } else {
-      alert(result.message);
-      navigate("/");
+      if (result.error) {
+        alert("ERRO 404, tente novamente mais tarde");
+      } else {
+        alert(result.message);
+        navigate("/");
+      }
     }
   };
 
